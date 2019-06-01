@@ -33,6 +33,8 @@ def read_walk():
 if __name__ == "__main__":
     user_walk = read_walk()
     for single_user, single_walk in user_walk.items():
+        if 40000 < single_walk.time < 40060:
+            
         print(single_walk)
         input()
     print(1)
