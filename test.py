@@ -9,32 +9,37 @@ import pickle
 
 # groupbyuser = final_day1.groupby("id")
 first_floor = [
-    "##############################",
-    "##########FF.................#",
-    "#AAAAA......###SSSSMMMMMMMMMM#",
-    "#AAAAA.PP...###SSSSMMMMMMMMMM#",
-    "#BBBBB.PP.TT###SSSSMMMMMMMMMM#",
-    "#BBBBB.PP.TT###SSSSMMMMMMMMMM#",
-    "#CCCCC.PP.11###SSSSMMMMMMMMMM#",
-    "#CCCCC.PP.11###SSSSMMMMMMMMMM#",
-    "#DDDDD.PP.11###SSSSMMMMMMMMMM#",
-    "#DDDDD.PP.11###SSSSMMMMMMMMMM#",
-    "######....22###SSSSMMMMMMMMMM#",
-    "######....22###SSSSMMMMMMMMMM#",
-    "#.QQQQ.......................#",
-    "I.QQQQ.......................#",
-    "#.........ff.......HH333344tt#",
-    "##I#IO#I#######O#O#HH333344tt#"
+    "###############################",
+    "####################O##########",
+    "###########FF.................#",
+    "##AAAAA......###SSSSMMMMMMMMMM#",
+    "##AAAAA.PP...###SSSSMMMMMMMMMM#",
+    "##BBBBB.PP.TT###SSSSMMMMMMMMMM#",
+    "##BBBBB.PP.TT###SSSSMMMMMMMMMM#",
+    "##CCCCC.PP.11###SSSSMMMMMMMMMM#",
+    "##CCCCC.PP.11###SSSSMMMMMMMMMM#",
+    "##DDDDD.PP.11###SSSSMMMMMMMMMM#",
+    "##DDDDD.PP.11###SSSSMMMMMMMMMM#",
+    "#######....22###SSSSMMMMMMMMMM#",
+    "#######....22###SSSSMMMMMMMMMM#",
+    "##.QQQQ.......................#",
+    "#I.QQQQ.......................#",
+    "##.........ff.......HH333344tt#",
+    "###I#IO#I#######O#O#HH333344tt#"
 ]
 def read_walk():
     with open("user_walk.pkl", 'rb') as fp: 
         return pickle.load(fp)
 
+def read_min():
+    day1 = pandas.read_csv('map_min\day1.csv')
+
 if __name__ == "__main__":
-    user_walk = read_walk()
+    # user_walk = read_walk()
+
     for single_user, single_walk in user_walk.items():
         if 40000 < single_walk.time < 40060:
-            
+
         print(single_walk)
         input()
     print(1)
